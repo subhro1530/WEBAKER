@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Navbar in desktop mode */
+.navbar.on{
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    background-color: rgb(31, 31, 31);
+    position: sticky;
+    height: 90px;
+}
+.navbar.off .left{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.navbar.off .left p{
+    color: orangered;
+}
+.navbar.off .right a{
+    text-decoration: none;
+    color: white;
+    padding: 40px 10px;
+    height: 5px;
+    width: 90px;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+.navbar.off .left h2{
+    font-size: 40px;
+    margin-right: 10px;
+}
+.navbar.on .left h2 span{
+    color: orangered;
+}
+.navbar.on{
+    align-items: center;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    background-color: rgb(31, 31, 31);
+    position: sticky;
+    height: 90px;
+}
+.navbar.on .left{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.navbar.on .left p{
+    color: orangered;
+}
+.navbar.on .right{
+    display: flex;
+    align-items: center;
+}
+.navbar.on .right a{
+    text-decoration: none;
+    color: white;
+    padding: 40px 10px;
+    height: 5px;
+    width: 90px;
+    text-align: center;
+    transition: .3s ease-in-out;
+}
+.navbar.on .right a:hover{
+    background-color: black;
+    border-top: 3px solid orangered;
+}
+.navbar.on .left h2{
+    font-size: 40px;
+    margin-right: 10px;
+}
+.navbar.on .left h2 span{
+    color: orangered;
+}
+
+
+/* Navbar in tablet or mobile mode */
+.navbar.off{
+    display: flex;
+    flex-direction: column;
+    background-color:  rgb(31, 31, 31);
+    align-items: center;
+}
+.navbar.off .right{
+    display: flex;
+    flex-direction: column;
+}
+.navbar.off .right a{
+    width: 100vw;
+    border-bottom: 3px solid rgb(42, 42, 42);
+}
+.navbar.off .left{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.navbar.off .right a:hover{
+    background-color: black;
+    border-top: 3px solid orangered;
+}
+.navbar.off .left p{
+    color: orangered;
+}
+.navbar.off .left h2{
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+
+/* Media Queries to make the webpage responsive */
+@media (max-width:1061px) {
+    .navbar.on{
+        display: none;
+    }
+}
+@media (min-width:1060px) {
+    .navbar.off{
+        display: none;
+    }
+}
