@@ -6,8 +6,14 @@
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
-
+body{
+    overflow-x: hidden;
+    background-color: rgb(234, 234, 234);
+}
 /* Navbar in desktop mode */
+.navbar{
+    position: relative;
+}
 .navbar.on{
     align-items: center;
     display: flex;
@@ -37,6 +43,7 @@
 .navbar.off .left h2{
     font-size: 40px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .navbar.on .left h2 span{
     color: orangered;
@@ -78,6 +85,7 @@
 .navbar.on .left h2{
     font-size: 40px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .navbar.on .left h2 span{
     color: orangered;
@@ -115,15 +123,165 @@
     margin-right: 10px;
 }
 
+/* Top Container syling desktop mode */
+.top-container.on{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("https://denimdev.com.au/wp-content/uploads/2016/12/viewport1-blog.png?p=6197");
+    /* height: 70vh; */
+    padding: 100px 0;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    color: rgb(191, 94, 171);
+}
+.top-container.on p span{
+    color: rgb(255, 169, 169);
+    opacity: .9;
+    font-size: 35px;
+}
+.top-container.on p{
+    font-size: 35px;
+    padding: 10px;
+}
+
+.top-container.on h2{
+    display: flex;
+    border-top: 5px solid rgb(255, 193, 193);
+    border-bottom: 5px solid rgb(131, 133, 255);
+    font-size: 65px;
+    padding: 20px 0;
+}
+.top-container.on h2 span{
+    color: rgb(255, 255, 255);
+}
+.top-container.on h2 div{
+    color: orangered;
+}
+
+/* Top Container syling mobile mode */
+.top-container.off{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("https://denimdev.com.au/wp-content/uploads/2016/12/viewport1-blog.png?p=6197");
+    /* height: 70vh; */
+    padding: 20px 0;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    color: rgb(191, 94, 171);
+}
+.top-container.off p span{
+    color: rgb(255, 169, 169);
+    opacity: .9;
+    font-size: 115%;
+}
+.top-container.off p{
+    font-size: 115%;
+    padding: 10px;
+}
+
+.top-container.off h2{
+    display: flex;
+    border-top: 5px solid rgb(255, 193, 193);
+    border-bottom: 5px solid rgb(131, 133, 255);
+    font-size: 225%;
+    padding: 20px 0;
+}
+.top-container.off h2 span{
+    color: rgb(255, 255, 255);
+}
+.top-container.off h2 div{
+    color: orangered;
+}
+
+/* Floating container in desktop mode */
+.floating-container.on{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: -50px 110px;
+    background-color: white;
+    padding: 30px;
+    border-top: 3px solid orangered;
+    box-shadow: 0px 5px 12px rgba(0,0,0,.5) ;
+    align-items: center;
+}
+.floating-container.on .partition{
+    display: flex;
+    flex-direction: row;
+    padding: 50px 10px;
+    /* align-items: center; */
+    border-top: 3px solid lightgrey;
+}
+.floating-container.on .partition .column{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.floating-container.on .partition .column h1{
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.floating-container.on .partition .column button{
+    width: 120px;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 5px 0;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: .2s ease-in-out;
+}
+.floating-container.on .partition .column button:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.floating-container.on .partition .column .heading{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+.floating-container.on .partition .column .heading i{
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    border-radius: 50px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.column2{
+    padding-right: 521px;
+    display: flex;
+    justify-content: start;
+    overflow-y: scroll;
+}
+.column2 img{
+    width: 450px;
+}
+
+
 
 /* Media Queries to make the webpage responsive */
 @media (max-width:1061px) {
     .navbar.on{
         display: none;
     }
+    .top-container.on{
+        display: none ;
+    }
 }
 @media (min-width:1060px) {
     .navbar.off{
         display: none;
+    }
+    .top-container.off{
+        display: none ;
     }
 }
