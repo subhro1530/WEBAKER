@@ -208,6 +208,7 @@ body{
     background-color: white;
     padding: 30px;
     border-top: 3px solid orangered;
+    border-bottom: 3px solid orangered;
     box-shadow: 0px 5px 12px rgba(0,0,0,.5) ;
     align-items: center;
 }
@@ -217,6 +218,7 @@ body{
     padding: 50px 10px;
     /* align-items: center; */
     border-top: 3px solid lightgrey;
+    width: 1100px;
 }
 .floating-container.on .partition .column{
     display: flex;
@@ -264,6 +266,101 @@ body{
 }
 .column2 img{
     width: 450px;
+}
+.partition .column .inside{    
+    display: flex;
+    margin-top: 50px;
+    border-bottom: 3px solid lightgrey;
+    padding-bottom: 40px;
+}
+.partition .column .inside .inner{    
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.partition .column .inside .inner .in{    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.partition .column .inside .inner .in h4{    
+    width: 165px;
+}
+.partition .column .inside .inner .in p{    
+    font-size: 10px;
+    width: 100px;
+    color: orangered;
+    font-style: italic;
+}
+.partition .column .inside img{
+    width: 100px;
+    height: 70px;
+}
+.partition .column img{
+    height: 200px;
+    width: 500px;
+}
+
+/* Taskbar Designing Desktop mode */
+.taskbar{
+    margin-top: 50px;
+    display: flex;
+    margin-left: 110px;
+    margin-right: 110px;
+    padding: 20px 40px;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    flex-direction: column;
+    box-shadow: 0px 5px 12px rgba(0,0,0,.8) ;
+    margin-bottom: 30px;
+}
+.taskbar .row{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    border-bottom: 3px solid lightgrey;
+}
+.taskbar .row .column h2{
+    margin-bottom: 20px;
+}
+.taskbar .row .column h2{
+    margin-bottom: 20px;
+}
+.taskbar .row .column a{
+    background-color: orangered;
+    color: white;
+    padding: 10px;
+    margin: 10px 2px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+.taskbar .row .column .butto{
+    margin-top: 20px;
+}
+.taskbar .row2{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.taskbar .row2 a{
+    text-decoration: none;
+    color: orangered;
+}
+.taskbar .row2 a:hover{
+    color: grey;
+}
+.lastopt{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: orangered;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 
